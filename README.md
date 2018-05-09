@@ -34,8 +34,8 @@ const whaaat = classDecorator((Class, value='DEFAULT') => {
 });
 
 @banana class TestClass {}
-@banana() class TestClass {}
-@whaaat class TestClass2 {}
-@whaaat() class TestClass3 {}
-@whaaat('BANANA!') class TestClass4 {}
+@banana() class TestClass2 {}
+@whaaat class TestClass3 {}
+@whaaat() class TestClass4 {}
+@whaaat('BANANA!') class TestClass5 {}
 ```
