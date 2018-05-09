@@ -1,0 +1,29 @@
+{
+  "name": "decorating",
+  "version": "1.0.0",
+  "description": "Helpers for decorating classes and properties",
+  "repository": "farwayer/decorating",
+  "author": "farwayer <farwayer@gmail.com>",
+  "license": "WTFPL",
+  "keywords": [
+    "decorate",
+    "decorator"
+  ],
+  "main": "lib",
+  "jsnext:main": "esm",
+  "module": "esm",
+  "react-native": "esm",
+  "scripts": {
+    "build": "yarn clean && yarn build-lib && yarn build-esm",
+    "build-lib": "babel src --out-dir lib",
+    "build-esm": "ESM=1 babel src --out-dir esm",
+    "clean": "rm -rf lib esm",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46"
+  },
+  "dependencies": {}
+}
