@@ -19,6 +19,7 @@
     "build-esm": "ESM=1 babel src --out-dir esm",
     "clean": "rm -rf lib esm",
     "test": "mocha",
+    "cover": "istanbul cover _mocha --report lcovonly -- --reporter spec && cat coverage/lcov.info | coveralls && rm -rf coverage",
     "prepack": "yarn build && yarn test"
   },
   "devDependencies": {
@@ -28,6 +29,8 @@
     "@babel/plugin-proposal-decorators": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "@babel/register": "^7.0.0-beta.46",
+    "coveralls": "^3.0.1",
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.1.1",
     "should": "^13.2.1"
   },
