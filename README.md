@@ -1,3 +1,10 @@
+# Decorating
+
+_Helpers for decorating classes and properties_
+
+[![Build Status](https://img.shields.io/travis/farwayer/decorating.svg)](https://travis-ci.org/farwayer/decorating)
+[![Coverage Status](https://img.shields.io/coveralls/farwayer/decorating.svg)](https://coveralls.io/github/farwayer/decorating?branch=master)
+
 ```js
 import {propertyDecorator, classDecorator} from 'decorating'
 
