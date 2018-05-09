@@ -16,7 +16,7 @@ const always = propertyDecorator((target, property, desc, value) => {
   return {get: () => value, set: () => {}};
 });
 
-const alwaysTwo = always(1);
+const alwaysTwo = always(2);
 
 class TestProps {
   @alwaysZero a;
