@@ -1,8 +1,8 @@
 import {isFunction, isObject, isString} from './is'
 
 
-export const decorateProperty = wrappedDecorate(isPropertyDecorator);
-export const decorateClass = wrappedDecorate(isClassDecorator);
+export const propertyDecorator = wrappedDecorate(isPropertyDecorator);
+export const classDecorator = wrappedDecorate(isClassDecorator);
 
 export function isPropertyDecorator(args) {
   return (
@@ -22,13 +22,15 @@ export function isClassDecorator(args) {
 
 
 function wrappedDecorate(isWithNoArgs) {
-  return (args, decorator) => {
-    const withArgs = !isWithNoArgs(args);
+  return decorator => {
+    return function () {
+      const withArgs = !isWithNoArgs(arguments);
 
-    return decorate(withArgs, args, (...decArgs) => {
-      const extraArgs = withArgs ? args : [];
-      return decorator(...decArgs, ...extraArgs);
-    });
+      return decorate(withArgs, arguments, (...decArgs) => {
+        const extraArgs = withArgs ? arguments : [];
+        return decorator(...decArgs, ...extraArgs);
+      });
+    };
   }
 }
 
