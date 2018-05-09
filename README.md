@@ -26,6 +26,7 @@ const whaaat = classDecorator((Class, value='DEFAULT') => {
   Class.whaaat = value;
 });
 
+@banana class TestClass {}
 @banana() class TestClass {}
 @whaaat class TestClass2 {}
 @whaaat() class TestClass3 {}
