@@ -18,12 +18,18 @@
     "build-lib": "babel src --out-dir lib",
     "build-esm": "ESM=1 babel src --out-dir esm",
     "clean": "rm -rf lib esm",
-    "prepack": "yarn build"
+    "test": "mocha",
+    "prepack": "yarn build && yarn test"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.46",
     "@babel/core": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46"
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/register": "^7.0.0-beta.46",
+    "mocha": "^5.1.1",
+    "should": "^13.2.1"
   },
   "dependencies": {}
 }
