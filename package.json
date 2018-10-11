@@ -23,16 +23,16 @@
     "prepack": "yarn build && yarn test"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.46",
-    "@babel/core": "^7.0.0-beta.46",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.46",
-    "@babel/plugin-proposal-decorators": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "@babel/register": "^7.0.0-beta.46",
-    "coveralls": "^3.0.1",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "coveralls": "^3.0.2",
     "istanbul": "^1.1.0-alpha.1",
-    "mocha": "^5.1.1",
-    "should": "^13.2.1"
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
   },
   "dependencies": {}
 }
