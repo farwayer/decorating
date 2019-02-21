@@ -1,4 +1,4 @@
-import {isFunction, isObject, isString} from './is'
+import is from './is'
 
 
 export const propertyDecorator = wrappedDecorate(isPropertyDecorator);
@@ -7,16 +7,16 @@ export const classDecorator = wrappedDecorate(isClassDecorator);
 export function isPropertyDecorator(args) {
   return (
     args.length === 3 &&
-    isObject(args[0]) &&
-    isString(args[1]) &&
-    isObject(args[2])
+    is.object(args[0]) &&
+    is.string(args[1]) &&
+    is.object(args[2])
   )
 }
 
 export function isClassDecorator(args) {
   return (
     args.length === 1 &&
-    isFunction(args[0])
+    is.function(args[0])
   )
 }
 

@@ -1,11 +1,9 @@
-export function isFunction(fn) {
-  return typeof fn === 'function';
+function isType(type) {
+  return val => typeof val === type;
 }
 
-export function isObject(obj) {
-  return typeof obj === 'object';
-}
-
-export function isString(str) {
-  return typeof str === 'string';
+export default {
+  object: isType('object'),
+  string: isType('string'),
+  function: isType('function'),
 }
