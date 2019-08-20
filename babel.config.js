@@ -1,8 +1,8 @@
-const envConfig = process.env.ESM ? {modules: false} : {};
+const esm = !!process.env.ESM
 
 module.exports = {
   presets: [
-    ['@babel/env', envConfig],
+    ['@babel/preset-env', {...(esm ? {modules: false} : {})}],
   ],
   plugins: [
     ['@babel/proposal-decorators', {legacy: true}],
