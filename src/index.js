@@ -24,16 +24,17 @@ export function isClassDecorator(args) {
 function wrappedDecorate(isWithNoArgs) {
   return decorator => {
     return function () {
-      const withArgs = !isWithNoArgs(arguments);
+      const args = arguments;
 
-      return decorate(withArgs, arguments, (...decArgs) => {
-        const extraArgs = withArgs ? arguments : [];
-        return decorator(...decArgs, ...extraArgs);
-      });
+      if (isWithNoArgs(args)) {
+        return decorator.apply(undefined, args);
+      }
+
+      return function () {
+        const extraArgs = Array.prototype.slice.call(args);
+        const allArgs = [].concat(...arguments, extraArgs);
+        return decorator.apply(undefined, allArgs);
+      }
     };
   }
-}
-
-function decorate(withArgs, args, decorator) {
-  return withArgs ? decorator : decorator(...args);
 }
