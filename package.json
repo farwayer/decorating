@@ -1,6 +1,6 @@
 {
   "name": "decorating",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Helpers for decorating classes and properties",
   "repository": "farwayer/decorating",
   "author": "farwayer <farwayer@gmail.com>",
