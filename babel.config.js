@@ -13,4 +13,4 @@ module.exports = {
     ['@babel/proposal-decorators', {legacy: true}],
     ['@babel/proposal-class-properties', {loose: true}],
   ]
-};
+}

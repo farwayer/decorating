@@ -1,8 +1,8 @@
 import * as is from './is'
 
 
-export const propertyDecorator = wrappedDecorate(isPropertyDecorator);
-export const classDecorator = wrappedDecorate(isClassDecorator);
+export const propertyDecorator = wrappedDecorate(isPropertyDecorator)
+export const classDecorator = wrappedDecorate(isClassDecorator)
 
 export function isPropertyDecorator(args) {
   return (
@@ -24,17 +24,17 @@ export function isClassDecorator(args) {
 function wrappedDecorate(isWithNoArgs) {
   return decorator => {
     return function () {
-      const args = arguments;
+      const args = arguments
 
       if (isWithNoArgs(args)) {
-        return decorator.apply(undefined, args);
+        return decorator.apply(undefined, args)
       }
 
       return function () {
-        const extraArgs = Array.prototype.slice.call(args);
-        const allArgs = [].concat(...arguments, extraArgs);
-        return decorator.apply(undefined, allArgs);
+        const extraArgs = Array.prototype.slice.call(args)
+        const allArgs = [].concat(...arguments, extraArgs)
+        return decorator.apply(undefined, allArgs)
       }
-    };
+    }
   }
 }
