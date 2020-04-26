@@ -13,6 +13,7 @@
   "main": "index.cjs.js",
   "module": "index.esm.js",
   "react-native": "index.js",
+  "sideEffects": false,
   "dependencies": {
     "istp": "^1.0.0"
   },
