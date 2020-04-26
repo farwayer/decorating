@@ -2609,10 +2609,10 @@ istanbul-reports@^3.0.2:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-istp@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/istp/-/istp-1.0.0.tgz#60f19e1babeb982dbf592f02295d63aef3bc5493"
-  integrity sha512-Gz6e0leGqV5NO2alezF2m05wqg8gUhrcIovH/WoICHGGB0dPM/oUfCHveGSkZoQqbuqzdlDkcu1Mh3+3DjeCyw==
+istp@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/istp/-/istp-1.0.1.tgz#0f37ea57c8107a5df50e395dd85a8c6db4aa2ab4"
+  integrity sha512-f0A0Zd7aqh4O/YItMfoVJVLz0/hWkvfp61QBsMxs637TDUyD/2y2BZ/PAf5Dh1yfF2A1HiShjkFMrsc36W49aA==
 
 jest-changed-files@^25.4.0:
   version "25.4.0"

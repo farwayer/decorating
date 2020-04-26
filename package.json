@@ -15,7 +15,7 @@
   "react-native": "index.js",
   "sideEffects": false,
   "dependencies": {
-    "istp": "^1.0.0"
+    "istp": "^1.0.1"
   },
   "scripts": {
     "prepack": "yarn cjs && yarn esm && yarn test",
