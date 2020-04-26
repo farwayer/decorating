@@ -6,10 +6,10 @@ export const classDecorator = wrappedDecorate(isClassDecorator)
 
 export function isPropertyDecorator(args) {
   return (
-    args.length === 3 &&
+    args.length === 3 && // 2 in TS for target ES3 but we do not support it
     isObj(args[0]) &&
     isStr(args[1]) &&
-    (isObj(args[2]) || !isDef(args[2])) // undefined in TS
+    (isObj(args[2]) || !isDef(args[2])) // undefined in TS for target >= ES5
   )
 }
 
