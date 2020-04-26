@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "es5",
-    "experimentalDecorators": true,
-    "types": ["should", "mocha"]
-  }
-}
