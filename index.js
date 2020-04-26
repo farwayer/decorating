@@ -1,4 +1,4 @@
-import * as is from './is'
+import {isStr, isFn, isObj, isDef} from 'istp'
 
 
 export const propertyDecorator = wrappedDecorate(isPropertyDecorator)
@@ -7,16 +7,16 @@ export const classDecorator = wrappedDecorate(isClassDecorator)
 export function isPropertyDecorator(args) {
   return (
     args.length === 3 &&
-    is.obj(args[0]) &&
-    is.str(args[1]) &&
-    (is.obj(args[2]) || !is.def(args[2])) // undefined in TS
+    isObj(args[0]) &&
+    isStr(args[1]) &&
+    (isObj(args[2]) || !isDef(args[2])) // undefined in TS
   )
 }
 
 export function isClassDecorator(args) {
   return (
     args.length === 1 &&
-    is.fn(args[0])
+    isFn(args[0])
   )
 }
 

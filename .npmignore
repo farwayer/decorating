@@ -1,8 +1,0 @@
-.idea/
-test/
-babel.config.js
-tsconfig.json
-.travis.yml
-yarn.lock
-.npmignore
-yarn-error.log

@@ -3,10 +3,9 @@ const esm = !!process.env.ESM
 module.exports = {
   presets: [
     ['@babel/preset-env', {
-      ...(esm ? {modules: false} : {}),
-      exclude: [
-        '@babel/plugin-transform-typeof-symbol',
-      ],
+      bugfixes: true,
+      loose: true,
+      modules: esm ? false : undefined,
     }],
   ],
   plugins: [

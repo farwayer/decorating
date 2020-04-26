@@ -10,33 +10,30 @@
     "decorator",
     "decorating"
   ],
-  "main": "lib",
-  "jsnext:main": "esm",
-  "module": "esm",
-  "react-native": "src",
+  "main": "index.cjs.js",
+  "module": "index.esm.js",
+  "react-native": "index.js",
+  "dependencies": {
+    "istp": "^1.0.0"
+  },
   "scripts": {
-    "build": "yarn clean && yarn build-lib && yarn build-esm",
-    "build-lib": "babel src --out-dir lib",
-    "build-esm": "ESM=1 babel src --out-dir esm",
-    "clean": "rm -rf lib esm",
-    "test": "mocha",
-    "cover": "istanbul cover _mocha --report lcovonly -- --reporter spec && cat coverage/lcov.info | coveralls && rm -rf coverage",
-    "prepack": "yarn build && yarn test"
+    "prepack": "yarn cjs && yarn esm && yarn test",
+    "cjs": "babel --out-file index.cjs.js index.js",
+    "esm": "ESM=1 babel --out-file index.esm.js index.js",
+    "test": "jest",
+    "cover": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-decorators": "^7.4.4",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
-    "@types/mocha": "^5.2.7",
-    "coveralls": "^3.0.6",
-    "istanbul": "^1.1.0-alpha.1",
-    "mocha": "^6.2.0",
-    "should": "^13.2.3",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "coveralls": "^3.1.0",
+    "jest": "^25.4.0",
+    "should": "^13.2.3"
   },
-  "dependencies": {}
+  "files": [
+    "index*.js"
+  ]
 }
