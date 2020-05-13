@@ -15,7 +15,7 @@
   "react-native": "index.js",
   "sideEffects": false,
   "dependencies": {
-    "istp": "^1.0.1"
+    "istp": "^1.0.2"
   },
   "scripts": {
     "prepack": "yarn cjs && yarn esm && yarn test",
@@ -26,16 +26,16 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-decorators": "^7.8.3",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-env": "^7.9.6",
     "@types/jest": "^25.2.1",
     "coveralls": "^3.1.0",
-    "jest": "^25.4.0",
+    "jest": "^26.0.1",
     "should": "^13.2.3",
-    "ts-jest": "^25.4.0",
-    "typescript": "^3.8.3"
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.9.2"
   },
   "files": [
     "index*.js"
