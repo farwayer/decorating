@@ -18,10 +18,11 @@
     "istp": "^1.0.2"
   },
   "scripts": {
-    "prepack": "yarn cjs && yarn esm && yarn test",
+    "prepack": "yarn test",
+    "build": "yarn cjs && yarn esm",
     "cjs": "babel --out-file index.cjs.js index.js",
     "esm": "ESM=1 babel --out-file index.esm.js index.js",
-    "test": "jest",
+    "test": "yarn build && jest",
     "cover": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
